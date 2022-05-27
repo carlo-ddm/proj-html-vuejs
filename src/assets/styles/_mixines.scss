@@ -1,0 +1,12 @@
+@mixin list-style {
+  display: flex;
+  list-style: none;
+  text-transform: uppercase;
+  color: black;
+}
+
+@mixin a-style {
+  margin: 0 10px;
+  font-size: 12px;
+  text-decoration: none;
+}

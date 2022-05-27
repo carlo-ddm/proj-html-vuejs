@@ -1,15 +1,20 @@
 <template>
   <header>
 <!-- TOP -->
-    <div class="cd-container-top">
+    <div class="cd-container-top d-flex align-items-center">
       <div class="container d-flex justify-content-between">
-        <span>1</span>
+        <div>
+          <i class="fa-solid fa-phone"></i>
+          <span>
+            (001)88451234 88455438
+          </span>
+        </div>
         <!-- social in HTML? -->
-        <span>
+        <div>
           <i class="fa-brands fa-facebook-f"></i>
           <i class="fa-brands fa-twitter"></i>
           <i class="fa-brands fa-pinterest-p"></i>
-        </span>
+        </div>
       </div>
     </div>
 
@@ -76,10 +81,24 @@ export default {
 @import '../assets/styles/mixines';
 
 header {
+  color: white;
+
   // TOP
   .cd-container-top {
     width: 100%;
-    border-bottom: 1px solid black;
+    height: 34px;
+    background-color: #3D3D3D;
+
+    span {
+      margin-left: 2px;
+      font-size: $primary-font;
+    }
+    
+    div:nth-last-child(1) {
+      i {
+        margin: 0 5px;
+      }
+    }
   }
   
   // BOTTOM

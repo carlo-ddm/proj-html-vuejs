@@ -113,7 +113,6 @@ header {
   .cd-container-bottom {
     width: 100%;
     height: 80px;
-    border-bottom: 1px solid black;
 
     .container {
       ul {

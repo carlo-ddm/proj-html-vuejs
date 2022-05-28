@@ -14,7 +14,7 @@
               </h1>
             </div>
             <p class="m-0">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sed, molestias corrupti ea debitis nulla consectetur nesciunt accusamus esse consequatur laudantium incidunt accusantium nihil deleniti dicta commodi, cupiditate ratione! Optio ad, cumque delectus iusto fuga dignissimos voluptas inventore nobis velit!
+              
             </p>
 
             <button class="cd-btn">readmore</button>
@@ -89,15 +89,18 @@ export default {
       jumboArg: [
         {
           buttonText: '1',
-          src: firstImg
+          src: firstImg,
+          jumboText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sed, molestias corrupti ea debitis nulla consectetur nesciunt accusamus esse consequatur laudantium incidunt accusantium nihil deleniti dicta commodi, cupiditate ratione! Optio ad, cumque delectus iusto fuga dignissimos voluptas inventore nobis velit!'
         },
         {
           buttonText: '2',
-          src: secondImg
+          src: secondImg,
+          jumboText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, dolorum?'
         },
         {
           buttonText: '3',
-          src: thirdImg
+          src: thirdImg,
+          jumboText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt distinctio ipsa cum, molestiae, velit dolore minus eligendi tenetur, odio placeat necessitatibus beatae praesentium sequi tempora! Ipsam doloremque voluptatibus sed exercitationem.'
         },
       ],
     }

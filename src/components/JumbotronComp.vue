@@ -13,9 +13,12 @@
                  business
               </h1>
             </div>
-            <p class="m-0">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sed, molestias corrupti ea debitis nulla consectetur nesciunt accusamus esse consequatur laudantium incidunt accusantium nihil deleniti dicta commodi, cupiditate ratione! Optio ad, cumque delectus iusto fuga dignissimos voluptas inventore nobis velit!
-            </p>
+
+            <div v-for="(point, index) in jumboArg" :key="`_index_${index}`">
+              <p v-if="selectedIndex === index">
+                {{jumboArg[selectedIndex].jumboText}}
+              </p>
+            </div>
 
             <button class="cd-btn">readmore</button>
 
@@ -100,7 +103,7 @@ export default {
         {
           buttonText: '3',
           src: thirdImg,
-          jumboText: 'consequatur laudantium incidunt accusantium nihil deleniti dicta commodi, cupiditate ratione! Optio ad, cumque delectus iusto fuga dignissimos voluptas inventore nobis velit!'
+          jumboText: 'consequatur laudantium'
         },
       ],
     }

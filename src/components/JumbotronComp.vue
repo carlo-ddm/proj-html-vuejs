@@ -5,7 +5,7 @@
 
         <!-- Colonna 1 -> TESTO -->
         <div class="col-6 cd1">
-          <div class="cd-container">
+          <div class="cd_container">
             <div class="jumbo-focus-on-your-business">
               <span>17 years of experience</span>
               <h1 class="m-0">Focus on your
@@ -19,11 +19,31 @@
 
             <button class="cd-btn">readmore</button>
 
-            <div class="social-nav">
-              <ul class="p-0">
-                <li v-for="(social, index) in socialNav" :key="`_social_${index}`"><a :href="social.href">{{social.name}}</a></li>
-              </ul>
+            <div class="jumbo-info d-flex">
+
+              <div class="social-nav">
+                <ul class="p-0">
+                  <li v-for="(social, index) in socialNav" :key="`_social_${index}`"><a :href="social.href">{{social.name}}</a></li>
+                </ul>
+              </div>
+
+              <div class="cd_container">
+                <div class="d-flex cd-btn">
+
+                  <ul>
+                    <li
+                     v-for="(point, index) in jumboArg" :key="`_index_${index}`"
+                     @click="change(index)"
+                     class="mx-2">
+                     {{point.buttonText}}
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+
             </div>
+
           </div>
         </div>
 
@@ -37,10 +57,16 @@
 </template>
 
 <script>
+import firstImg from '../assets/images/Group-35-2x.png';
+import secondImg from '../assets/images/Group-35-2x.png';
+import thirdImg from '../assets/images/Group-35-2x.png';
+
 export default {
   name: 'JumbotronComp',
   data() {
     return {
+      indexSelected: 0,
+      
       socialNav: [
         {
           name: 'facebook',
@@ -58,7 +84,30 @@ export default {
           name: 'twitter',
           href: '#'
         },
-      ]
+      ],
+
+      jumboArg: [
+        {
+          buttonText: '1',
+          src: firstImg
+        },
+        {
+          buttonText: '2',
+          src: secondImg
+        },
+        {
+          buttonText: '3',
+          src: thirdImg
+        },
+      ],
+    }
+  },
+
+  methods: {
+    change(index){
+      this.indexSelected = index;
+      console.log(index);
+      console.log(this.indexSelected);
     }
   },
 }
@@ -81,11 +130,14 @@ export default {
   .col-6.cd1{
     padding-top: 130px;
 
-    .cd-container {
+    .cd_container {
       width: 100%;
 
       .jumbo-focus-on-your-business {
         margin-bottom: 40px;
+        h1 {
+          font-size: 70px;
+        }
       }
 
       p {
@@ -96,18 +148,35 @@ export default {
         margin: 40px 0 40px 0px;
       }
 
-      .social-nav {
-        margin: 40px 0 40px 0px;
-        ul {
-          @include list-style;
-          li {
-            a {
-              @include a-style
+      .jumbo-info {
+
+        .social-nav {
+          margin: 40px 0 40px 0px;
+          ul {
+            @include list-style;
+            li {
+              a {
+                @include a-style
+              }
+            }
+          }
+        }
+
+        .cd_container {
+          ul {
+            margin: 0;
+
+            @include list-style;
+            li {
+              text-align: center;
+              cursor: pointer;
+              border: 1px solid black;
             }
           }
         }
       }
-    }
+
+      }
   }
 
 

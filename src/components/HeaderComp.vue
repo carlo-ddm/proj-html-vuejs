@@ -22,7 +22,11 @@
     <div class="cd-container-bottom d-flex align-items-center">
       <div class="container d-flex justify-content-between align-items-center">
 
-        <span>1</span>
+        <div>
+          LOGO
+          <span>Phlox</span>
+          <span>Business</span>
+        </div>
 
         <nav>
           <ul class="m-0 p-0">
@@ -32,7 +36,10 @@
           </ul>
         </nav>
 
-        <span>3</span>
+        <div>
+          <button>Purchase</button>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
 
       </div>
     </div>
@@ -81,13 +88,14 @@ export default {
 @import '../assets/styles/mixines';
 
 header {
-  color: white;
+  
 
   // TOP
   .cd-container-top {
     width: 100%;
     height: 34px;
     background-color: #3D3D3D;
+    color: white;
 
     span {
       margin-left: 2px;

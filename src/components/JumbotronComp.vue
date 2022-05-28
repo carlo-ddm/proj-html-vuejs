@@ -14,7 +14,7 @@
               </h1>
             </div>
             <p class="m-0">
-              
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sed, molestias corrupti ea debitis nulla consectetur nesciunt accusamus esse consequatur laudantium incidunt accusantium nihil deleniti dicta commodi, cupiditate ratione! Optio ad, cumque delectus iusto fuga dignissimos voluptas inventore nobis velit!
             </p>
 
             <button class="cd-btn">readmore</button>
@@ -65,7 +65,7 @@ export default {
   name: 'JumbotronComp',
   data() {
     return {
-      indexSelected: 0,
+      selectedIndex: 0,
       
       socialNav: [
         {
@@ -95,12 +95,12 @@ export default {
         {
           buttonText: '2',
           src: secondImg,
-          jumboText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, dolorum?'
+          jumboText: 'consequatur laudantium incidunt accusantium nihil deleniti dicta commodi, cupiditate ratione! Optio ad, cumque delectus iusto fuga dignissimos voluptas inventore nobis velit!'
         },
         {
           buttonText: '3',
           src: thirdImg,
-          jumboText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt distinctio ipsa cum, molestiae, velit dolore minus eligendi tenetur, odio placeat necessitatibus beatae praesentium sequi tempora! Ipsam doloremque voluptatibus sed exercitationem.'
+          jumboText: 'consequatur laudantium incidunt accusantium nihil deleniti dicta commodi, cupiditate ratione! Optio ad, cumque delectus iusto fuga dignissimos voluptas inventore nobis velit!'
         },
       ],
     }
@@ -108,9 +108,9 @@ export default {
 
   methods: {
     change(index){
-      this.indexSelected = index;
+      this.selectedIndex = index;
       console.log(index);
-      console.log(this.indexSelected);
+      console.log(this.selectedIndex);
     }
   },
 }

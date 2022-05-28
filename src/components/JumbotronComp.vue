@@ -14,7 +14,7 @@
               </h1>
             </div>
 
-            <div v-for="(point, index) in jumboArg" :key="`_index_${index}`">
+            <div v-for="(point, index) in jumboArg" :key="`_index1_${index}`">
               <p v-if="selectedIndex === index">
                 {{jumboArg[selectedIndex].jumboText}}
               </p>
@@ -35,7 +35,7 @@
 
                   <ul>
                     <li
-                     v-for="(point, index) in jumboArg" :key="`_index_${index}`"
+                     v-for="(point, index) in jumboArg" :key="`_index2_${index}`"
                      @click="change(index)"
                      class="mx-2">
                      {{point.buttonText}}
@@ -52,7 +52,12 @@
 
         <!-- Colonna 2 -> IMMAGINE -->
         <div class="col-6 cd2">
-          <img src="../assets/images/Group-35-2x.png" alt="jumbotron-pic-1">
+          <div class="cd_container"
+          v-for="(point, index) in jumboArg" :key="`_index3_${index}`" >
+            <img
+            v-if="selectedIndex === index"
+            :src="`${jumboArg[selectedIndex].src}`" alt="">
+          </div>
         </div>
       </div>
     </div>
@@ -61,8 +66,8 @@
 
 <script>
 import firstImg from '../assets/images/Group-35-2x.png';
-import secondImg from '../assets/images/Group-35-2x.png';
-import thirdImg from '../assets/images/Group-35-2x.png';
+import secondImg from '../assets/images/Group-36-2x.png';
+import thirdImg from '../assets/images/Group-40-2x.png';
 
 export default {
   name: 'JumbotronComp',
@@ -187,11 +192,14 @@ export default {
 
 
   .col-6.cd2 {
-    img {
-      position: relative;
-      top: -170px;
-      right: 150px;
-      width: 210%;
+    .cd_container {
+      width: 100%;
+      img {
+        position: relative;
+        top: -170px;
+        right: 150px;
+        width: 210%;
+      }
     }
     }
 }

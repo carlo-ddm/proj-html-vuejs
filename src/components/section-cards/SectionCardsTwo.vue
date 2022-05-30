@@ -1,6 +1,6 @@
 <template>
 <div class="cd_card">
-  <img :src="`${card.card}`" alt="">
+  <img :src="`${item.pic}`" alt="">
 </div>
 </template>
 
@@ -8,7 +8,7 @@
 export default {
   name: 'SectionCardsTwo',
   props: {
-    card: Object
+    item: Object
   }
 }
 </script>

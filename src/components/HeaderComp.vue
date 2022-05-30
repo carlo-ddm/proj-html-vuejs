@@ -36,8 +36,8 @@
           </ul>
         </nav>
 
-        <div>
-          <button>Purchase</button>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="cd-btn">Purchase</div>
           <i class="fa-solid fa-magnifying-glass"></i>
         </div>
 
@@ -87,6 +87,8 @@ export default {
 // Import MIXINES
 @import '../assets/styles/mixines';
 
+@import '../assets/styles/utilities.scss';
+
 header {
   
 
@@ -121,6 +123,10 @@ header {
           @include a-style
         }
       }
+    }
+
+    .cd-btn {
+      background-color: bisque;
     }
   }
 }

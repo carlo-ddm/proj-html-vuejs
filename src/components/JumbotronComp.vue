@@ -64,7 +64,6 @@
 import firstImg from '../assets/images/Group-35-2x.png';
 import secondImg from '../assets/images/Group-36-2x.png';
 import thirdImg from '../assets/images/Group-40-2x.png';
-
 export default {
   name: 'JumbotronComp',
   data() {
@@ -89,7 +88,6 @@ export default {
           href: '#'
         },
       ],
-
       jumboArg: [
         {
           buttonText: '1',
@@ -109,7 +107,6 @@ export default {
       ],
     }
   },
-
   methods: {
     change(index){
       this.selectedIndex = index;
@@ -127,36 +124,27 @@ export default {
 @import '../assets/styles/mixines';
 // import Utilities
 @import '../assets/styles/utilities.scss';
-
-
 .jumbotron {
   overflow: hidden;
   height: 800px;
   background-color: #F9F9F9;
-
   .col-6.cd1{
     padding-top: 130px;
-
     .cd_container {
       width: 100%;
-
       .jumbo-focus-on-your-business {
         margin-bottom: 40px;
         h1 {
           font-size: 70px;
         }
       }
-
       p {
         margin: 40px 0 40px 0px !important;
       }
-
       button {
         margin: 40px 0 40px 0px;
       }
-
       .jumbo-info {
-
         .social-nav {
           margin: 40px 0 40px 0px;
           ul {
@@ -168,11 +156,9 @@ export default {
             }
           }
         }
-
         .cd_container {
           ul {
             margin: 0;
-
             @include list-style;
             li {
               text-align: center;
@@ -182,11 +168,8 @@ export default {
           }
         }
       }
-
       }
   }
-
-
   .col-6.cd2 {
     .cd_container {
       width: 100%;
@@ -199,6 +182,4 @@ export default {
     }
     }
 }
-
-
 </style>

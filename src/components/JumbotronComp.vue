@@ -131,7 +131,7 @@ export default {
 
 .jumbotron {
   overflow: hidden;
-  height: 800px;
+  height: 750px;
   background-color: #F9F9F9;
 
   .col-6.cd1{
@@ -158,7 +158,6 @@ export default {
       }
 
       .jumbo-info {
-
         .social-nav {
           margin: 40px 0 40px 0px;
           ul {
@@ -196,8 +195,9 @@ export default {
       img {
         position: relative;
         top: -170px;
-        right: 255px;
-        width: 155%;
+        right: 90px;
+        width: 1245px;
+        height: 100%;
       }
     }
   }

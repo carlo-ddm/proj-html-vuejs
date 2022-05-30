@@ -31,7 +31,9 @@ export default {
 // Import Fontsource
 @import '~@fontsource/roboto/index.css';
 // Import Fontawesome
-@import '~@fortawesome/fontawesome-free/css/all.min.css'
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+// Import _general
+@import './assets/styles/general'
 
 
 </style>

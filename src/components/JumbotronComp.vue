@@ -1,6 +1,6 @@
 <template>
   <div class="jumbotron">
-    <div class="container">
+    <div class="cdd_container">
       <div class="row">
 
         <!-- Colonna 1 -> TESTO -->
@@ -14,7 +14,7 @@
               </h1>
             </div>
 
-            <div v-for="(point, index) in jumboArg" :key="`_index1_${index}`">
+            <div class="custom-container" v-for="(point, index) in jumboArg" :key="`_index1_${index}`">
               <p v-if="selectedIndex === index">
                 {{jumboArg[selectedIndex].jumboText}}
               </p>
@@ -64,6 +64,7 @@
 import firstImg from '../assets/images/Group-35-2x.png';
 import secondImg from '../assets/images/Group-36-2x.png';
 import thirdImg from '../assets/images/Group-40-2x.png';
+
 export default {
   name: 'JumbotronComp',
   data() {
@@ -88,6 +89,7 @@ export default {
           href: '#'
         },
       ],
+
       jumboArg: [
         {
           buttonText: '1',
@@ -107,6 +109,7 @@ export default {
       ],
     }
   },
+
   methods: {
     change(index){
       this.selectedIndex = index;
@@ -124,27 +127,38 @@ export default {
 @import '../assets/styles/mixines';
 // import Utilities
 @import '../assets/styles/utilities.scss';
+
+
 .jumbotron {
   overflow: hidden;
   height: 800px;
   background-color: #F9F9F9;
+
   .col-6.cd1{
     padding-top: 130px;
+
     .cd_container {
       width: 100%;
+
       .jumbo-focus-on-your-business {
         margin-bottom: 40px;
         h1 {
           font-size: 70px;
         }
       }
-      p {
-        margin: 40px 0 40px 0px !important;
+
+      .custom-container {
+        width: 80%;
+        height: 30px;
       }
+
+
       button {
         margin: 40px 0 40px 0px;
       }
+
       .jumbo-info {
+
         .social-nav {
           margin: 40px 0 40px 0px;
           ul {
@@ -156,9 +170,11 @@ export default {
             }
           }
         }
+
         .cd_container {
           ul {
             margin: 0;
+
             @include list-style;
             li {
               text-align: center;
@@ -168,18 +184,24 @@ export default {
           }
         }
       }
+
       }
   }
+
+
+
   .col-6.cd2 {
     .cd_container {
       width: 100%;
       img {
         position: relative;
         top: -170px;
-        right: 150px;
-        width: 210%;
+        right: 255px;
+        width: 155%;
       }
     }
-    }
+  }
 }
+
+
 </style>

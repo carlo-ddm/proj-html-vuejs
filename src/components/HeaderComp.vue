@@ -2,7 +2,7 @@
   <header>
 <!-- TOP -->
     <div class="cd-container-top d-flex align-items-center">
-      <div class="container d-flex justify-content-between">
+      <div class="cdd_container d-flex justify-content-between">
         <div>
           <i class="fa-solid fa-phone"></i>
           <span>
@@ -20,7 +20,7 @@
 
 <!-- BOTTOM -->
     <div class="cd-container-bottom d-flex align-items-center">
-      <div class="container d-flex justify-content-between align-items-center">
+      <div class="cdd_container d-flex justify-content-between align-items-center">
 
         <div>
           LOGO
@@ -86,7 +86,7 @@ export default {
 @import '../assets/styles/vars';
 // Import MIXINES
 @import '../assets/styles/mixines';
-
+// Import UTILITIES
 @import '../assets/styles/utilities.scss';
 
 header {
@@ -116,7 +116,8 @@ header {
     width: 100%;
     height: 80px;
 
-    .container {
+    .cdd_container {
+      width: 100%;
       ul {
         @include list-style;
         li a {

@@ -2,7 +2,7 @@
   <main>
     <!-- SEZIONE 1 -->
     <section id="sect-1" class="d-flex justify-content-center align-items-center">
-      <div class="container">
+      <div class="cdd_container">
         <div class="row">
   
           <!-- Colonna 1 -> TESTO -->
@@ -64,7 +64,7 @@
   <!-- Sezione 3 -->
     <section id="sect-3">
     <div class="top d-flex align-items-end">
-      <div class="container">
+      <div class="cdd_container">
         <div class="row">
           <div class="col-6 cd1">
             <h1>our recente web design -----&---- some examples of past projects</h1>
@@ -75,7 +75,7 @@
         </div>
       </div>
     </div>
-    <div class="bottom container wrapper d-flex flex-wrap justify-content-between">
+    <div class="bottom cdd_container wrapper d-flex flex-wrap justify-content-between">
       <SectionCardsTwo v-for="(item, index) in pics" :key="`_index_${index}`" :item="item" />
     </div>
     <div class="container d-flex justify-content-center">
@@ -176,6 +176,7 @@ export default {
     padding-top: 130px;
 
     .cd_container {
+      width: 100%;
       .we-are-here {
         margin-bottom: 40px;
       }
@@ -232,21 +233,13 @@ export default {
   height: 1500px;
   .top {
     height: calc(20%);
-    .container {
+    .cdd_container {
       height: 200px;
       .col-6.cd2 {
         padding-top: 60px;
       }
     }
   }
-  .cd_card {
-  flex-basis: 24.5%;
-  height: 24.5%;
-  margin-bottom: 10px;
-  img {
-    width: 100%;
-  }
-}
   .cd-btn {
     display: flex;
     justify-self: center;

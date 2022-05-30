@@ -32,16 +32,12 @@
 
               <div class="cd_container">
                 <div class="d-flex cd-btn">
-
-                  <ul>
-                    <li
-                     v-for="(point, index) in jumboArg" :key="`_index2_${index}`"
-                     @click="change(index)"
-                     class="mx-2">
-                     {{point.buttonText}}
-                    </li>
-                  </ul>
-
+                  <button
+                   v-for="(point, index) in jumboArg" :key="`_index2_${index}`"
+                   @click="change(index)"
+                   class="mx-2">
+                   {{point.buttonText}}
+                  </button>
                 </div>
               </div>
 

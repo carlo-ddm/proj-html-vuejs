@@ -93,7 +93,7 @@ header {
   // TOP
   .cd-container-top {
     width: 100%;
-    height: 34px;
+    height: 35px;
     background-color: #3D3D3D;
     color: white;
 

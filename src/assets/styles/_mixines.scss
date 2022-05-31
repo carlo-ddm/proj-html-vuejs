@@ -2,11 +2,16 @@
   display: flex;
   list-style: none;
   text-transform: uppercase;
-  color: black;
 }
 
 @mixin a-style {
   margin-right: 35px;
-  font-size: 12px;
+  font-size: 10px;
   text-decoration: none;
 }
+
+@mixin grad {
+  background-image: linear-gradient(to right, #55eb62, $primary-color);
+}
+
+

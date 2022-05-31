@@ -21,15 +21,12 @@
     </div>
 
     <!-- BOTTOM -->
-    <div class="cd-container-bottom d-flex align-items-center">
+    <div class="bottom">
       <div
-        class="cdd_container d-flex justify-content-between align-items-center"
-      >
-        <div>
-          LOGO
-          <span>Phlox</span>
-          <span>Business</span>
-        </div>
+        class="cdd_container d-flex justify-content-between align-items-center">
+        
+        <img src="../assets/images/cropped-Group-39-2x.png" alt="">
+
 
         <nav>
           <ul class="m-0 p-0">
@@ -109,7 +106,6 @@ header {
           margin-right: 5px;
           font-size: $primary-font;
         }
-  
       }
 
       div:nth-last-child(1) {
@@ -121,22 +117,33 @@ header {
   }
 
   // BOTTOM
-  .cd-container-bottom {
-    width: 100%;
+  .bottom {
     height: 80px;
-
     .cdd_container {
-      width: 100%;
+      height: 80px;
+      img {
+        width: 170px
+      }
       ul {
         @include list-style;
         li a {
           @include a-style;
+          color: #AAAAAA;
+          &:hover {
+            color: #555555;
+          }
         }
       }
     }
 
     .cd-btn {
-      background-color: bisque;
+      @include grad;
+      color: white;
+      margin: 0 20px;
+    }
+
+    i {
+      color: $primary-color;
     }
   }
 }

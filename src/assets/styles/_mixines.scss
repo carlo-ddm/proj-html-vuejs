@@ -12,6 +12,19 @@
 
 @mixin grad {
   background-image: linear-gradient(to right, #55eb62, $primary-color);
+  color: white;
+}
+
+
+@mixin black-grad {
+  background-image: linear-gradient(to right, #575252, #000000e8);
+  color: white;
+}
+
+@mixin paragr {
+  color: $text-color;
+  font-size: $paragr-font;
+  font-weight: 300;
 }
 
 

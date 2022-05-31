@@ -110,6 +110,7 @@ header {
 
       div:nth-last-child(1) {
         i {
+          font-size: $primary-font;
           margin: 0 5px;
         }
       }
@@ -138,7 +139,6 @@ header {
 
     .cd-btn {
       @include grad;
-      color: white;
       margin: 0 20px;
     }
 

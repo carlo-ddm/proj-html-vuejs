@@ -4,25 +4,28 @@
       <div class="row">
 
         <!-- Colonna 1 -> TESTO -->
-        <div class="col-6 cd1">
-          <div class="cd_container">
+        <div class="col-6 colonna-sinistra">
+          <div class="custom-container">
             <div class="jumbo-focus-on-your-business">
-              <span>17 years of experience</span>
-              <h1 class="m-0">Focus on your
+              <div>17 years of experience</div>
+              <h1 class="m-0">Focus on Your
                 <br>
-                 business
+                 <span class="business">Business</span>
               </h1>
             </div>
 
-            <div class="custom-container" v-for="(point, index) in jumboArg" :key="`_index1_${index}`">
-              <p v-if="selectedIndex === index">
-                {{jumboArg[selectedIndex].jumboText}}
-              </p>
+            <div>
+              <div :class="selectedIndex === index ? 'd-block' : 'd-none' " class="custom-container" v-for="(point, index) in jumboArg" :key="`_index1_${index}`">
+                <p class="paragr-jumbo" v-if="selectedIndex === index">
+                  {{jumboArg[selectedIndex].jumboText}}
+                </p>
+              </div>
             </div>
+
 
             <button class="cd-btn">readmore</button>
 
-            <div class="jumbo-info d-flex">
+            <div class="jumbo-info d-flex align-items-center">
 
               <div class="social-nav">
                 <ul class="p-0">
@@ -30,16 +33,16 @@
                 </ul>
               </div>
 
-              <div class="cd_container">
-                <div class="d-flex cd-btn">
-                  <button
+              <div class="button-container d-flex justify-content-center align-items-center">
+                  <div
                    v-for="(point, index) in jumboArg" :key="`_index2_${index}`"
                    @click="change(index)"
-                   class="mx-2">
+                   class=" d-flex justify-content-center align-items-center mx-2">
                    {{point.buttonText}}
-                  </button>
-                </div>
+                  </div>
               </div>
+
+        
 
             </div>
 
@@ -70,6 +73,9 @@ export default {
   data() {
     return {
       selectedIndex: 0,
+      dNone: 'd-none',
+      dBlock: 'd-block',
+
       
       socialNav: [
         {
@@ -92,17 +98,17 @@ export default {
 
       jumboArg: [
         {
-          buttonText: '1',
+          buttonText: '01',
           src: firstImg,
           jumboText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sed, molestias corrupti ea debitis nulla consectetur nesciunt accusamus esse consequatur laudantium incidunt accusantium nihil deleniti dicta commodi, cupiditate ratione! Optio ad, cumque delectus iusto fuga dignissimos voluptas inventore nobis velit!'
         },
         {
-          buttonText: '2',
+          buttonText: '02',
           src: secondImg,
           jumboText: 'consequatur laudantium incidunt accusantium nihil deleniti dicta commodi, cupiditate ratione! Optio ad, cumque delectus iusto fuga dignissimos voluptas inventore nobis velit!'
         },
         {
-          buttonText: '3',
+          buttonText: '03',
           src: thirdImg,
           jumboText: 'consequatur laudantium'
         },
@@ -128,58 +134,93 @@ export default {
 // import Utilities
 @import '../assets/styles/utilities.scss';
 
+// Classi dinamiche
+.d-none {
+  display: none;
+}
 
+.d-Block {
+  display: block;
+}
+
+// Classi Statiche
 .jumbotron {
   overflow: hidden;
   height: 750px;
   background-color: #F9F9F9;
 
-  .col-6.cd1{
+  .col-6.colonna-sinistra{
     padding-top: 130px;
 
-    .cd_container {
+    .custom-container {
       width: 100%;
+      height: 50px;
 
       .jumbo-focus-on-your-business {
         margin-bottom: 40px;
+        
+        div {
+          font-size: $primary-font;
+          font-weight: 300;
+          color: #00D9A6;
+          text-transform: uppercase;
+          letter-spacing: 3px;
+        }
+
         h1 {
           font-size: 70px;
+          span.business {
+            color: #00D9A6;
+          }
         }
+
       }
 
-      .custom-container {
-        width: 80%;
-        height: 30px;
+      .paragr-jumbo {
+        @include paragr
       }
-
 
       button {
         margin: 40px 0 40px 0px;
+        @include black-grad
       }
 
       .jumbo-info {
         .social-nav {
-          margin: 40px 0 40px 0px;
+          margin: 40px 50px 40px 0px;
           ul {
             @include list-style;
             li {
               a {
-                @include a-style
+                  font-size: $paragr-font;
+                  text-decoration: none;
+                  color: #555555;
+                &:after {
+                  content:' - '
+                }
               }
             }
           }
         }
 
-        .cd_container {
-          ul {
-            margin: 0;
-
-            @include list-style;
-            li {
-              text-align: center;
-              cursor: pointer;
-              border: 1px solid black;
-            }
+        .button-container {
+          position: relative;
+          left: 100px;
+          bottom: 18px;
+          height: 35px;
+          border: none;
+          border-radius: 30px;
+          cursor: pointer;
+          font-size: 10px;
+          text-transform: uppercase;
+          border: 1px solid black;
+          div {
+            
+            padding: 10px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 1px solid black;
           }
         }
       }

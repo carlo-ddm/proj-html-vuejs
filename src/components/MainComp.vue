@@ -82,6 +82,139 @@
       <div class="cd-btn">ciao</div>
     </div>
   </section>
+
+  <!-- SEZIONE 4 -->
+  <!-- TOP -->
+  <section id="sect-4">
+    <div class="cdd_container top">
+      <div>
+        <img src="../assets/images/person-with-long-curly-hair-PZ99QM2-2x.jpg" alt="">
+        <div>
+          ****
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="bottom">
+      <div class="cdd_container d-flex justify-content-between">
+        <div class="cdd-card d-flex flex-column justify-content-center">
+          <h1>
+            ciao ciao ciao ciao
+          </h1>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum quasi vero totam, velit ullam hic eveniet est. Cum nobis aut quos in fugit nulla accusantium, unde neque harum impedit quia?</p>
+        </div>
+        <div class="cdd-card offers">
+          <div class="cdd-box">
+            <h4>designin</h4>
+            <span>all designs</span>
+            <div class="price d-flex justify-content-center align-items-center">price</div>
+            <ul class="p-0">
+              <li>bisosos</li>
+              <li>bisosos</li>
+              <li>bisosos</li>
+              <li>bisosos</li>
+              <li>bisosos</li>
+          </ul>
+          </div>
+        </div>
+        <div class="cdd-card offers">
+          <div class="cdd-box">
+            <h4>designin</h4>
+            <span>WordPress Projects</span>
+            <div class="price d-flex justify-content-center align-items-center">price</div>
+            <ul class="p-0">
+              <li>bisosos</li>
+              <li>bisosos</li>
+              <li>bisosos</li>
+              <li>bisosos</li>
+              <li>bisosos</li>
+          </ul>
+          </div>
+        </div>
+        <div class="cdd-card offers">
+          <div class="cdd-box">
+            <h4>designin</h4>
+            <span>Web Products</span>
+            <div class="price d-flex justify-content-center align-items-center">
+              <span>price</span>
+            </div>
+            <ul class="p-0">
+              <li>bisosos</li>
+              <li>bisosos</li>
+              <li>bisosos</li>
+              <li>bisosos</li>
+              <li>bisosos</li>
+          </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- lisa -->
+    <div class="lisa">
+      <div class="overlay">
+        <div class="d-flex justify-content-center align-items-center">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic possimus veritatis, maxime unde velit consequuntur accusamus adipisci quia vitae recusandae fugit sint est quod facere doloribus, cumque voluptatem ullam facilis!
+          </p>
+        </div>
+
+      </div>
+    </div>
+    <!-- Latest news or our... -->
+    <div class="latest">
+        <div class="cdd_container d-flex flex-column align-items-center">
+          <h1>latest news</h1>
+          <div class="cdd_cards d-flex justify-content-between">
+            <div class="cdd_card">
+              <img src="../assets/images/serious-businesswoman-with-documents-talking-on-P9Q6LX6-1024.jpg" alt="">
+              <div class="presentation">
+                ciao
+              </div>
+            </div>
+            <div class="cdd_card">
+              <img src="../assets/images/Businessman-at-the-desk-in-his-office-resting--1024x768.jpg" alt="">
+              <div class="presentation">
+                ciao
+              </div>
+            </div>
+            <div class="cdd_card">
+              <img src="../assets/images/simple-home-office-with-tree-PBXRXYB-large-1024x768.jpg" alt="">
+              <div class="presentation">
+                ciao
+              </div>
+            </div>
+          </div>
+          <div class="cd-btn">ciaooo</div>
+        </div>
+      </div>
+
+      <!-- Clients -->
+      <div class="clients">
+        <div class="cdd_container d-flex justify-content-between">
+          <div class="cd-card">
+            <div>
+
+            </div>
+          </div>
+          <div class="cd-card">
+            <div>
+
+            </div>
+          </div>
+        </div>
+        <div class="cdd_container">
+          <ul class="p-0 d-flex justify-content-between">
+            <li>123</li>
+            <li>123</li>
+            <li>123</li>
+            <li>123</li>
+            <li>123</li>
+          </ul>
+        </div>
+      </div>
+  </section>
   </main>
 </template>
 
@@ -150,8 +283,7 @@ export default {
           {
             pic: img8
           },
-        ]
-        
+        ],
       }
     },
     components: { SectionCard, SectionCardsTwo }
@@ -247,7 +379,174 @@ export default {
   }
 }
 
+#sect-4 {
+  width: 100%;
+  background-color: #F9F9F9;
+  .top {
+    padding: 200px 0;
+    div {
+      position: relative;
+      opacity: 0.8;
+      background-color: green;
+      width: 735px;
+      height: 595px;
+      border-radius: 20px;
+      img {
+        opacity: 0.5;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+      }
+      div {
+        position: absolute;
+        top: 70px;
+        left: 610px;
+        border: 1px solid black;
+        border-radius: 20px;
+        width: 735px;
+        height: 595px;
+        background-color: white;
+        opacity: 1;
+      }
+    }
+  }
+
+  .bottom {
+    padding: 150px 0;
+    .cdd_container {
+      height: 400px;
+
+      .cdd-card {
+        flex-basis: calc(100% / 4);
+      }
+
+      .offers {
+        padding: 0 40px;
+
+        .cdd-box {
+          text-align: center;
+          border: 1px solid black;
+          height: 100%;
+          border-radius: 10px;
+
+          .price {
+            height: 60px;
+            border: 1px solid black;
+            background-color: gold;
+          }
+
+          ul {
+            margin-top: 40px;
+            li {
+              @include list-style;
+              justify-content: center;
+              margin: 20px 0px;
+              &::before {
+                content: '/2713';
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                // background-image: url(img/chevron-down-solid.svg);
+                background-position: center;
+                line-height: 1px;
+                margin-left: 4px;
+              }
+            }
+          } 
+        }
+      }
+    }
+  }
+
+  .lisa {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-image: url(../assets/images/four-businesspeople-in-a-boardroom-with-paperwork-PC4V8H4.jpg);
+    background-size: cover;
+    background-position: center;
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(34, 34, 34);
+      opacity: 0.8;
+      div {
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        margin: auto;
+        p {
+          text-align: center;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .latest {
+    padding: 150px 0;
+    border: 1px solid black;
+
+    .cdd_container {
+  
+      .cdd_cards {
+        width: 100%;
+      }
+      .cdd_card {
+        position: relative;
+        padding: 20px;
+        flex-basis: calc(100% / 3);
+       
+        img {
+          width: 100%;
+          border-radius: 5px;
+        }
+        .presentation {
+          position: absolute;
+          left: 45px;
+          bottom: -25px;
+          width: 80%;
+          border: 1px solid black;
+          border-radius: 5px;
+          height: 100px;
+          background-color: white;
+        }
+      }
+    }
+
+    .cd-btn {
+      margin-top: 70px;
+      background-color: rgb(150, 150, 43);
+    }
+  }
+
+  .clients {
+    padding: 150px 0;
+    width: 100%;
+    .cdd_container {
+      .cd-card {
+        padding: 10px;
+        flex-basis: calc(100% / 2);
+        height: 300px;
+
+        div {
+          width: 100%;
+          height: 100%;
+          border: 1px solid black;
+          border-radius: 10px;
+        }
+      
+      }
+    }
+
+    li {
+      @include list-style;
+    }
+  }
 
 
-
+}
 </style>

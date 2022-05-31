@@ -37,6 +37,7 @@
                   <div
                    v-for="(point, index) in jumboArg" :key="`_index2_${index}`"
                    @click="change(index)"
+                   :class="selectedIndex === index ? 'dinamic-green' : ''"
                    class=" d-flex justify-content-center align-items-center mx-2">
                    {{point.buttonText}}
                   </div>
@@ -50,7 +51,7 @@
         </div>
 
         <!-- Colonna 2 -> IMMAGINE -->
-        <div class="col-6 cd2">
+        <div class="col-6 colonna-destra">
           <div class="cd_container"
           v-for="(point, index) in jumboArg" :key="`_index3_${index}`" >
             <img
@@ -75,6 +76,7 @@ export default {
       selectedIndex: 0,
       dNone: 'd-none',
       dBlock: 'd-block',
+      gradient: 'dinamic-green',
 
       
       socialNav: [
@@ -143,6 +145,10 @@ export default {
   display: block;
 }
 
+.dinamic-green {
+  @include grad
+}
+
 // Classi Statiche
 .jumbotron {
   overflow: hidden;
@@ -204,6 +210,7 @@ export default {
         }
 
         .button-container {
+          @include black-grad;
           position: relative;
           left: 100px;
           bottom: 18px;
@@ -213,14 +220,12 @@ export default {
           cursor: pointer;
           font-size: 10px;
           text-transform: uppercase;
-          border: 1px solid black;
           div {
-            
             padding: 10px;
             width: 30px;
             height: 30px;
             border-radius: 50%;
-            border: 1px solid black;
+
           }
         }
       }
@@ -228,9 +233,7 @@ export default {
       }
   }
 
-
-
-  .col-6.cd2 {
+  .col-6.colonna-destra {
     .cd_container {
       width: 100%;
       img {

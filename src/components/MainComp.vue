@@ -136,11 +136,11 @@
             <span>all designs</span>
             <div class="price-black d-flex justify-content-center align-items-center">price</div>
             <ul class="p-0">
-              <li>bisosos</li>
-              <li>bisosos</li>
-              <li>bisosos</li>
-              <li>bisosos</li>
-              <li>bisosos</li>
+              <li><p>Lorem ipsum dolor sit amet.</p></li>
+              <li><p>Lorem ipsum dolor sit amet.</p></li>
+              <li><p>Lorem ipsum dolor sit amet.</p></li>
+              <li><p>Lorem ipsum dolor sit amet.</p></li>
+              <li><p>Lorem ipsum dolor sit amet.</p></li>
           </ul>
           </div>
         </div>
@@ -150,11 +150,11 @@
             <span>WordPress Projects</span>
             <div class="price-green d-flex justify-content-center align-items-center">price</div>
             <ul class="p-0">
-              <li>bisosos</li>
-              <li>bisosos</li>
-              <li>bisosos</li>
-              <li>bisosos</li>
-              <li>bisosos</li>
+              <li><p>Lorem ipsum dolor sit amet.</p></li>
+              <li><p>Lorem ipsum dolor sit amet.</p></li>
+              <li><p>Lorem ipsum dolor sit amet.</p></li>
+              <li><p>Lorem ipsum dolor sit amet.</p></li>
+              <li><p>Lorem ipsum dolor sit amet.</p></li>
           </ul>
           </div>
         </div>
@@ -166,11 +166,11 @@
               <span>price</span>
             </div>
             <ul class="p-0">
-              <li>bisosos</li>
-              <li>bisosos</li>
-              <li>bisosos</li>
-              <li>bisosos</li>
-              <li>bisosos</li>
+              <li><p>Lorem ipsum dolor sit amet.</p></li>
+              <li><p>Lorem ipsum dolor sit amet.</p></li>
+              <li><p>Lorem ipsum dolor sit amet.</p></li>
+              <li><p>Lorem ipsum dolor sit amet.</p></li>
+              <li><p>Lorem ipsum dolor sit amet.</p></li>
           </ul>
           </div>
         </div>
@@ -499,8 +499,7 @@ export default {
         ul {
           list-style: none;
           li {
-            margin: 15px 0;
-            line-height: 30px;
+            margin: 10px 0;
             &::before {
               content:'\2713';
               color: $primary-color;
@@ -539,7 +538,7 @@ export default {
       }
 
       .offers {
-        padding: 0 40px;
+        padding: 0 30px;
 
         .cdd-box {
           text-align: center;
@@ -563,17 +562,21 @@ export default {
           ul {
             margin-top: 40px;
             li {
-              @include list-style;
+              display: flex;
+              list-style: none;
               justify-content: center;
-              margin: 20px 0px;
-              &::before {
-                content: '/2713';
-                display: inline-block;
-                width: 12px;
-                height: 12px;
-                background-position: center;
-                line-height: 1px;
-                margin-left: 4px;
+              margin: 10px 0px;
+              p {
+                @include paragr;
+                &::before {
+                  content: '\2713';
+                  position: relative;
+                  right: 5px;
+                  background-position: center;
+                  color: black;
+                  font-size: 14px;
+                  font-weight: bold;
+                }
               }
             }
           } 

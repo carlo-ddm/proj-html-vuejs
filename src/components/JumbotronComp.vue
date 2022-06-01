@@ -209,7 +209,6 @@ export default {
             }
           }
         }
-
         .button-container {
           @include black-grad;
           position: relative;

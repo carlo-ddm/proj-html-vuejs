@@ -99,13 +99,21 @@
   <!-- TOP -->
   <section id="sect-4">
     <div class="cdd_container top">
-      <div>
-        <img src="../assets/images/person-with-long-curly-hair-PZ99QM2-2x.jpg" alt="">
-        <div>
-          ****
+      <div class="custom_container w-100">
+        <div class="long-hair">
+          
         </div>
       </div>
-
+      <div class="custom_container over w-100">
+        <div>
+          <h1>text</h1>
+        </div>
+      </div>
+      <!-- <div class="green-overlay" >
+          <img class="long-hair" src="../assets/images/person-with-long-curly-hair-PZ99QM2-2x.jpg" alt="">
+      </div> -->
+      <!-- <img class="woman" src="../assets/images/businesswoman-analysing-document-P8WSNMC-1024x820.jpg" alt=""> -->
+      <!-- <div class="custom_container" ></div> -->
     </div>
 
     <!-- BOTTOM -->
@@ -317,7 +325,7 @@ export default {
 
 // CLASSI DINAMICHE
 .active {
-  box-shadow: 0 0 25px #dedede;
+  box-shadow: 0 0 15px #dedede;
 }
 
 
@@ -429,7 +437,7 @@ export default {
   }
 
   .custom_container {
-    margin: 100px 0;
+    margin: 100px 0 0px;
     .cd-btn {
       @include grad
     }
@@ -440,32 +448,67 @@ export default {
   width: 100%;
   background-color: #F9F9F9;
   .top {
+    // position: relative;
+    // display: flex;
+    // align-items: center;
     padding: 200px 0;
-    div {
-      position: relative;
-      opacity: 0.8;
-      background-color: green;
-      width: 735px;
-      height: 595px;
-      border-radius: 20px;
-      img {
-        opacity: 0.5;
-        width: 100%;
-        height: 100%;
-        border-radius: 20px;
-      }
-      div {
-        position: absolute;
-        top: 70px;
-        left: 610px;
-        border: 1px solid black;
-        border-radius: 20px;
-        width: 735px;
-        height: 595px;
-        background-color: white;
-        opacity: 1;
+    .custom_container {
+      div.long-hair {
+        width: 53%;
+        height: 600px;
+        border: 1px solid #FFFFFF;
+        border-radius: 10px;
+        background-image: url(../assets/images/person-with-long-curly-hair-PZ99QM2-2x.jpg);
+        background-position: center;
+        background-size: cover;
       }
     }
+
+    .custom_container.over {
+      display: flex;
+      justify-content: end;
+      position: relative;
+      bottom: 550px;
+      div {
+        width: 53%;
+        height: 600px;
+        border: 1px solid #FFFFFF;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0 0 15px #dedede;
+      }
+    }
+    // .col-6.colonna-sinistra {
+    //   div {
+    //     width: 100%;
+    //     height: 400px;
+    //     border: 1px solid black;
+    //   }
+      
+    // }
+
+ 
+    // .green-overlay {
+    //   @include grad;
+    //   border-radius: 20px;
+    //   img.long-hair {
+    //     width: 710px;
+    //     border-radius: 20px;
+    //     opacity: 0.2;
+    //   }
+    // }
+    // .custom_container {
+    //   position: absolute;
+    //   left: 648px;
+    //   bottom: 145px;
+    //   width: 700px;
+    //   height: 473.328px;
+ 
+    //   background-color: white;
+    
+    // }
+
+   
   }
 
   .bottom {

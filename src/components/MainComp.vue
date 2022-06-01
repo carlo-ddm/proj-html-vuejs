@@ -9,7 +9,7 @@
           <div class="col-5 colonna-sinistra d-flex align-items-center">
             <div class="custom_container">
               <div class="we-are-here">
-                <h1>we are here to
+                <h1>we are here to 
                   <br>
                    make your <span>website</span>
                    <br>
@@ -108,7 +108,15 @@
       </div>
       <div class="custom_container over w-100">
         <div>
-          <h1>text</h1>
+          <h1>we <span>love</span> what <br> we do </h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam architecto itaque cumque dolore deleniti cupiditate laborum, consequuntur commodi dolores ea laudantium, eaque laboriosam debitis maxime doloribus sint officia dolorem quisquam. Dolore illo quibusdam repudiandae corporis temporibus suscipit natus enim eveniet, exercitationem veritatis aut quasi asperiores magni, dignissimos ducimus quaerat, vel necessitatibus! Deserunt ab illum distinctio, nemo ipsa sunt quasi numquam.
+          </p>
+          <ul class="p-0">
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iurer?</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, odit.</li>
+            <li>Lorem ipsum dolor sit amet consectetur </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -118,7 +126,7 @@
       <div class="cdd_container d-flex justify-content-between">
         <div class="cdd-card d-flex flex-column justify-content-center">
           <h1>
-            ciao ciao ciao ciao
+            with <span>live chat <br> 24/7 </span> support
           </h1>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum quasi vero totam, velit ullam hic eveniet est. Cum nobis aut quos in fugit nulla accusantium, unde neque harum impedit quia?</p>
         </div>
@@ -126,7 +134,7 @@
           <div class="cdd-box">
             <h4>designin</h4>
             <span>all designs</span>
-            <div class="price d-flex justify-content-center align-items-center">price</div>
+            <div class="price-black d-flex justify-content-center align-items-center">price</div>
             <ul class="p-0">
               <li>bisosos</li>
               <li>bisosos</li>
@@ -140,7 +148,7 @@
           <div class="cdd-box">
             <h4>designin</h4>
             <span>WordPress Projects</span>
-            <div class="price d-flex justify-content-center align-items-center">price</div>
+            <div class="price-green d-flex justify-content-center align-items-center">price</div>
             <ul class="p-0">
               <li>bisosos</li>
               <li>bisosos</li>
@@ -154,7 +162,7 @@
           <div class="cdd-box">
             <h4>designin</h4>
             <span>Web Products</span>
-            <div class="price d-flex justify-content-center align-items-center">
+            <div class="price-black d-flex justify-content-center align-items-center">
               <span>price</span>
             </div>
             <ul class="p-0">
@@ -445,7 +453,7 @@ export default {
   width: 100%;
   background-color: #F9F9F9;
   .top {
-    padding: 200px 0;
+    padding: 200px 0 0;
     .custom_container {
       .green {
         @include grad;
@@ -472,49 +480,59 @@ export default {
       div {
         width: 53%;
         height: 600px;
+        padding: 100px 50px;
         border: 1px solid #FFFFFF;
         border-radius: 10px;
         background-color: white;
         box-shadow: 0 0 15px #dedede;
+        h1 {
+          font-size: 45px;
+          font-weight: 300;
+          text-transform: capitalize;
+          span {
+            color: $primary-color;
+          }
+        }
+        p, ul {
+          @include paragr
+        }
+        ul {
+          list-style: none;
+          li {
+            margin: 15px 0;
+            line-height: 30px;
+            &::before {
+              content:'\2713';
+              color: $primary-color;
+              font-weight: bold;
+              position: relative;
+              top: 5px;
+              right: 6px;
+            }
+          }
+        }
       }
     }
-    // .col-6.colonna-sinistra {
-    //   div {
-    //     width: 100%;
-    //     height: 400px;
-    //     border: 1px solid black;
-    //   }
-      
-    // }
-
- 
-    // .green-overlay {
-    //   @include grad;
-    //   border-radius: 20px;
-    //   img.long-hair {
-    //     width: 710px;
-    //     border-radius: 20px;
-    //     opacity: 0.2;
-    //   }
-    // }
-    // .custom_container {
-    //   position: absolute;
-    //   left: 648px;
-    //   bottom: 145px;
-    //   width: 700px;
-    //   height: 473.328px;
- 
-    //   background-color: white;
-    
-    // }
-
-   
   }
 
   .bottom {
-    padding: 150px 0;
     .cdd_container {
-      height: 400px;
+      padding: 0 0 180px;
+
+      h1 {
+        font-size: 45px;
+        font-weight: 300;
+        
+        span {
+          color: $primary-color;
+        }
+      }
+
+      p {
+        @include paragr
+      }
+
+
 
       .cdd-card {
         flex-basis: calc(100% / 4);
@@ -525,14 +543,21 @@ export default {
 
         .cdd-box {
           text-align: center;
-          border: 1px solid black;
-          height: 100%;
+          border: 1px solid #FFFFFF;
           border-radius: 10px;
-
-          .price {
-            height: 60px;
-            border: 1px solid black;
-            background-color: gold;
+          background-color: white;
+          box-shadow: 0 0 15px #dedede;
+          height: 500px;
+          border-radius: 10px;
+          .price-black {
+            width: 100%;
+            height: 80px;
+            @include black-grad
+          }
+          .price-green {
+            width: 100%;
+            height: 80px;
+            @include grad
           }
 
           ul {
@@ -546,7 +571,6 @@ export default {
                 display: inline-block;
                 width: 12px;
                 height: 12px;
-                // background-image: url(img/chevron-down-solid.svg);
                 background-position: center;
                 line-height: 1px;
                 margin-left: 4px;
@@ -555,6 +579,7 @@ export default {
           } 
         }
       }
+
     }
   }
 

@@ -15,10 +15,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/styles/vars';
+@import '../../assets/styles/mixines';
+
   .cd_card {
-  flex-basis: 45%;
-  height: 220px;
-  margin-bottom: 40px;
-  border: 1px solid black;
+    padding: 35px 30px;
+    flex-basis: 45%;
+    height: 240px;
+    margin: 0 0 20px 20px;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 0 25px #DEDEDE;
+    h6 {
+      font-size: 20px;
+      font-weight: 200;
+      text-transform: capitalize;
+    }
+    
+    p {
+    @include paragr
+  }
 }
 </style>

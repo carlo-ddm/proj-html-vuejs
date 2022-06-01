@@ -6,26 +6,28 @@
         <div class="row">
   
           <!-- Colonna 1 -> TESTO -->
-          <div class="col-6 cd1">
-            <div class="cd_container">
+          <div class="col-5 colonna-sinistra d-flex align-items-center">
+            <div class="custom_container">
               <div class="we-are-here">
-                <h1 class="m-0">We are here to
+                <h1>we are here to
                   <br>
-                   make your website
+                   make your <span>website</span>
                    <br>
-                   look more elegant
+                   look more <span>elegant</span>
                    <br>
                    and stylish
                 </h1>
               </div>
-              <button class="cd-btn">view all</button>
+              <button @click="isActive = !isActive"
+              :class="{'active' : isActive}"
+              class="cd-btn">view all</button>
             </div>
           </div>
   
           <!-- Colonna 2 -> IMMAGINE -->
-          <div class="col-6 cd2">
+          <div class="col-7 colonna-destra">
             <!-- CARDS -->
-            <div class="wrapper d-flex flex-wrap justify-content-between">
+            <div class="wrapper d-flex flex-wrap justify-content-start">
               <SectionCard v-for="(card, index) in cards" :key="`_index_${index}`" :cardItem="card" />
             </div>
           </div>
@@ -36,25 +38,30 @@
     <!-- SEZIONE 2 -->
     <section id="sect-2" class="d-flex justify-content-center align-items-center">
       <div class="row">
-        <div class="col-6 cd1">
-          <img class="architect" src="../assets/images/busy-architect-PYVKWM4-1024x872.jpg" alt="">
+        <div class="col-6 colonna-sinistra">
+          <div class="green-overlay" >
+            <img class="architect" src="../assets/images/busy-architect-PYVKWM4-1024x872.jpg" alt="">
+          </div>
           <img class="woman" src="../assets/images/businesswoman-analysing-document-P8WSNMC-1024x820.jpg" alt="">
         </div>
-        <div class="col-6 cd2">
-          <div class="cd_container">
+        <div class="col-6 colonna-destra d-flex justify-content-center align-items-center">
+          <div class="custom_container">
             <div class="learn-more">
                <h1 class="m-0">learn more
                   <br>
                    about our
                    <br>
-                   mission
+                   <span>mission</span>
                 </h1>
                 <div>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sed, molestias corrupti ea debitis nulla consectetur nesciunt accusamus esse consequatur laudantium incidunt accusantium nihil deleniti dicta commodi, cupiditate ratione! Optio ad, cumque delectus iusto fuga dignissimos voluptas inventore nobis velit!
                   </p>
                 </div>
-                <button class="cd-btn">readmore</button>
+                <button
+                @click="isActive2 = !isActive2"
+                :class="{'active' : isActive2}"
+                class="cd-btn">readmore</button>
             </div>
           </div>
         </div>
@@ -235,6 +242,10 @@ import img8 from '../assets/images/cody-davis-253928-unsplash-1024x1024.jpg';
 export default {
      data() {
       return {
+        active: 'active',
+        isActive: false,
+        isActive2: false,
+
         cards: [
           {
             icon: 'fa-gauge-simple-high',
@@ -298,19 +309,32 @@ export default {
 // import Utilities
 @import '../assets/styles/utilities.scss';
 
+.active {
+  box-shadow: 0 0 25px #dedede;
+}
+
 
 // SEZIONE 1
 #sect-1 {
   width: 100%;
   height: 800px;
 
-  .col-6.cd1 {
-    padding-top: 130px;
-
-    .cd_container {
+  .col-5.colonna-sinistra {
+    .custom_container {
       width: 100%;
       .we-are-here {
         margin-bottom: 40px;
+        h1 {
+          font-size: 45px;
+          font-weight: 300;
+          text-transform: capitalize;
+          span {
+            color: $primary-color;
+          }
+        }
+      }
+      .cd-btn {
+        @include grad;
       }
     }
   }
@@ -322,38 +346,50 @@ export default {
   height: 800px;
   background-color: #F9F9F9;
 
-  .col-6.cd1 {
+  .col-6.colonna-sinistra {
     position: relative;
     display: flex;
     align-items: center;
-    img.architect {
-      width: 600px;
+    .green-overlay {
+      @include grad;
       border-radius: 20px;
+      img.architect {
+        width: 600px;
+        border-radius: 20px;
+        opacity: 0.2;
+      }
     }
     img.woman {
       position: absolute;
-      left: 180px;
-      top: 150px;
+      left: 210px;
+      top: 70px;
       width: 600px;
       border-radius: 20px;
     }
   }
 
-  .col-6.cd2 {
-    padding-top: 130px;
-    padding-left: 70px;
-    .cd_container {
-
+  .col-6.colonna-destra {
+    .custom_container {
+      width: 60%;
       .learn-more {
         margin-bottom: 40px;
+        h1 {
+          font-size: 45px;
+          font-weight: 300;
+          span {
+            color: $primary-color
+          }
+        }
       }
 
       p {
         margin: 40px 0 40px 0px !important;
+        @include paragr
       }
 
        button {
         margin: 40px 0 40px 0px;
+        @include grad
       }
     }
   }

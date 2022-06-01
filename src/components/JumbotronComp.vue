@@ -168,7 +168,7 @@ export default {
         div {
           font-size: $primary-font;
           font-weight: 300;
-          color: #00D9A6;
+          color: $primary-color;
           text-transform: uppercase;
           letter-spacing: 3px;
         }
@@ -176,7 +176,7 @@ export default {
         h1 {
           font-size: 70px;
           span.business {
-            color: #00D9A6;
+            color: $primary-color;
           }
         }
 
@@ -200,10 +200,11 @@ export default {
               a {
                   font-size: $paragr-font;
                   text-decoration: none;
-                  color: #555555;
-                &:after {
-                  content:' - '
+                  color: #444444;
+                &::after {
+                  content:'-'
                 }
+
               }
             }
           }

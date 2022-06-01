@@ -70,24 +70,29 @@
 
   <!-- Sezione 3 -->
     <section id="sect-3">
-    <div class="top d-flex align-items-end">
       <div class="cdd_container">
-        <div class="row">
-          <div class="col-6 cd1">
-            <h1>our recente web design -----&---- some examples of past projects</h1>
-          </div>
-          <div class="col-6 cd2 d-flex align-items-center">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam adipisci ducimus animi pariatur ab, accusantium error commodi hic ut laboriosam facere dicta, assumenda quis rem ea dolores accusamus esse! Laudantium.</p>
+        <div class="top d-flex align-items-end">
+            <div class="row">
+              <div class="col-6 colonna-sinistra">
+                <h1>Our recent <span>web design</span> & some examples of past <span>projects</span></h1>
+              </div>
+              <div class="col-6 colonna-destra d-flex align-items-end">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam adipisci ducimus animi pariatur ab, accusantium error commodi hic ut laboriosam facere dicta, assumenda quis rem ea dolores accusamus esse! Laudantium.</p>
+              </div>
+            </div>
+        </div>
+        <!-- BOTTOM -> SERIE di IMMAGINI -->
+        <div class="bottom wrapper d-flex flex-wrap justify-content-between">
+          <SectionCardsTwo v-for="(item, index) in pics" :key="`_index_${index}`" :item="item" />
+          <div class="custom_container w-100 d-flex justify-content-center">
+            <div
+            @click="isActive3 = !isActive3"
+            :class="{'active' : isActive3}"
+             class="cd-btn">read more</div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="bottom cdd_container wrapper d-flex flex-wrap justify-content-between">
-      <SectionCardsTwo v-for="(item, index) in pics" :key="`_index_${index}`" :item="item" />
-    </div>
-    <div class="container d-flex justify-content-center">
-      <div class="cd-btn">ciao</div>
-    </div>
+    
   </section>
 
   <!-- SEZIONE 4 -->
@@ -245,6 +250,7 @@ export default {
         active: 'active',
         isActive: false,
         isActive2: false,
+        isActive3: false,
 
         cards: [
           {
@@ -309,6 +315,7 @@ export default {
 // import Utilities
 @import '../assets/styles/utilities.scss';
 
+// CLASSI DINAMICHE
 .active {
   box-shadow: 0 0 25px #dedede;
 }
@@ -397,21 +404,35 @@ export default {
 
 // SEZIONE 3
 #sect-3 {
+  padding: 100px 0 180px;
   width: 100%;
-  height: 1500px;
-  .top {
-    height: calc(20%);
-    .cdd_container {
-      height: 200px;
-      .col-6.cd2 {
-        padding-top: 60px;
+  .cdd_container {
+    .top {
+      padding-bottom: 50px;
+      .colonna-sinistra {
+        
+        h1 {
+          font-size: 45px;
+          font-weight: 300;
+          span {
+            color: $primary-color;
+          }
+        }
+      }
+
+      .colonna-destra {
+        p {
+          @include paragr
+        }
       }
     }
   }
-  .cd-btn {
-    display: flex;
-    justify-self: center;
-    background-color: bisque;
+
+  .custom_container {
+    margin: 100px 0;
+    .cd-btn {
+      @include grad
+    }
   }
 }
 

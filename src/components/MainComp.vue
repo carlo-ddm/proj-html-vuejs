@@ -100,8 +100,10 @@
   <section id="sect-4">
     <div class="cdd_container top">
       <div class="custom_container w-100">
-        <div class="long-hair">
-          
+        <div class="green">
+          <div class="long-hair">
+            
+          </div>
         </div>
       </div>
       <div class="custom_container over w-100">
@@ -109,11 +111,6 @@
           <h1>text</h1>
         </div>
       </div>
-      <!-- <div class="green-overlay" >
-          <img class="long-hair" src="../assets/images/person-with-long-curly-hair-PZ99QM2-2x.jpg" alt="">
-      </div> -->
-      <!-- <img class="woman" src="../assets/images/businesswoman-analysing-document-P8WSNMC-1024x820.jpg" alt=""> -->
-      <!-- <div class="custom_container" ></div> -->
     </div>
 
     <!-- BOTTOM -->
@@ -448,19 +445,22 @@ export default {
   width: 100%;
   background-color: #F9F9F9;
   .top {
-    // position: relative;
-    // display: flex;
-    // align-items: center;
     padding: 200px 0;
     .custom_container {
-      div.long-hair {
-        width: 53%;
-        height: 600px;
-        border: 1px solid #FFFFFF;
+      .green {
+        @include grad;
+        width: 52%;
         border-radius: 10px;
-        background-image: url(../assets/images/person-with-long-curly-hair-PZ99QM2-2x.jpg);
-        background-position: center;
-        background-size: cover;
+        div.long-hair {
+          width: 100%;
+          height: 600px;
+          border: 1px solid #FFFFFF;
+          border-radius: 10px;
+          background-image: url(../assets/images/person-with-long-curly-hair-PZ99QM2-2x.jpg);
+          background-position: center;
+          background-size: cover;
+          opacity: 0.2;
+        }
       }
     }
 

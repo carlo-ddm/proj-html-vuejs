@@ -314,6 +314,23 @@ export default {
             pic: img8
           },
         ],
+
+        boxs: [
+          {
+            title: 'dev',
+            subtitle: 'defr',
+            list: [
+              {
+                item1: 'dfsdfsf',
+                item2: 'dfsdfsf',
+                item3: 'dfsdfsf',
+                item4: 'dfsdfsf',
+                item5: 'dfsdfsf',
+              }
+            ]
+          }
+        ]
+
       }
     },
     components: { SectionCard, SectionCardsTwo }
